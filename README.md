@@ -1,6 +1,8 @@
 # PyTorch Implementation of Alchemical Kernels
  
-Reproduced from [Feature optimization for atomistic machine learning yields a data-driven construction of the periodic table of the elements](https://doi.org/10.1039/C8CP05921G) with a simplified loss function compared to the original paper. The idea is to use kernel ridge regression to fit the structure-energy relationship from the SOAP descriptor representation. Nevertheless, to reduce the dimensionality of the kernel, an alchemical kernel is used, which describes the elemental information of the 39 elements present in the dataset as a linear combination of 4 pseudo-elements, or alchemical elements. This then allows us to produce a reconstruction of the periodic table of elements as shown in the figure below, for 2, 3, and 4 pseudo-elements (taken from the original paper).
+Reproduced from [Feature optimization for atomistic machine learning yields a data-driven construction of the periodic table of the elements](https://doi.org/10.1039/C8CP05921G) with a simplified loss function compared to the original paper. The idea is to use kernel ridge regression to fit the structure-energy relationship from the SOAP descriptor representation. The SOAP vector is computed by [librascal](https://github.com/lab-cosmo/librascal).
+
+Nevertheless, to reduce the dimensionality of the kernel, an alchemical kernel is used, which describes the elemental information of the 39 elements present in the dataset as a linear combination of 4 pseudo-elements, or alchemical elements. This then allows us to produce a reconstruction of the periodic table of elements as shown in the figure below, for 2, 3, and 4 pseudo-elements (taken from the original paper).
 <p align="center">
 <img src="https://user-images.githubusercontent.com/68380659/184111486-a273b817-bd64-4e75-88f0-ad59a5ea3b69.gif" alt="periodic_table" width="50%"/>
 </p>
